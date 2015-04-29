@@ -1,10 +1,13 @@
 @import "fonts.css";
+@import "animations.css";
 
+/* General Styles */
 body {
-  background: #ec008c;
+  background: #fff;  /*background: #ec008c;*/
   color: #fff;
+  margin: 0;
+  position: relative;
 }
-
 h1 {
   position: absolute;
   top: 50%;
@@ -15,4 +18,355 @@ h1 {
   font: 20vmin/1 HUGEAvantGardeBold;
   letter-spacing: -0.06em;
   text-align: center;
+}
+
+/* Desktop Nav bar css */
+#phone-navbar {
+  display: none;
+}
+#phone-options {
+  display: none;
+}
+.nav-bar {
+  position: relative;
+  background: #ec008c;
+  height: 72px;
+  width: 100%;
+  vertical-align: top;
+  z-index: 10;
+}
+.nav-bar #logo {
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 24px;
+  height: 24px;
+  width: 60px;
+}
+.nav-options {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 84px;
+  margin-left: 48px;
+}
+.nav-options .option {
+  position: relative;
+  font: 21px HUGEAvantGardeBold;
+  padding: 24px;
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+}
+.nav-options a:link, .nav-options a:visited, .nav-options a:active {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-options a.option:hover, .nav-options .option.active {
+  background-color: #fff;
+  color: #ec008c;
+}
+.bg-img {
+  position: relative;
+}
+.bg-img img {
+  width: 100%;
+}
+.bg-img h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font: 7vw HUGEAvantGardeBold;
+  text-align: center;
+  line-height: 110%;
+}
+.principal-text {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.principal-text p {
+  font: 24px Galaxie;
+  color: #000;
+  margin: 0;
+}
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-animation-name: opacity;
+  -webkit-animation-duration: 1s;
+  animation-name: opacity;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+.no-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-animation-name: opacity-reverse;
+  -webkit-animation-duration: 1s;
+  animation-name: opacity-reverse;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+.float-menu {
+  display: block;
+  position: absolute;
+  background: #fff;
+  z-index: 20;
+  color: #000;
+  padding: 12px 0;
+}
+.float-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.float-menu ul a li {
+  padding: 0 24px;
+  font: 16px Galaxie;
+  height: 48px;
+  line-height: 48px;
+}
+.hide {
+  display: none !important;
+}
+.float-menu ul a:link, .float-menu ul a:visited, .float-menu ul a:active {
+  text-decoration: none;
+  color: #000;
+}
+.float-menu ul a:hover {
+  text-decoration: none;
+  color: #ec008c;
+}
+.float-menu ul a:hover li {
+  background-color: #eee;
+}
+
+/* Media Screen to 960px width screen */
+@media screen and (max-width:960px) {
+  .nav-options .option {
+    font-size: 18px;
+    padding: 24px 16px;
+  }
+  .principal-text {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .principal-text p {
+    padding: 0 24px;
+  }
+}
+
+/* Media Screen to 767px width screen */
+@media screen and (max-width:767px) {
+  #phone-options {
+    display: block;
+  }
+  #toggle-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+  }
+  .close-show {
+    opacity: 1;
+    -webkit-animation-name: on-show-close-icon;
+    -webkit-animation-duration: 1s;
+    animation-name: on-show-close-icon;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  .close-dismiss {
+    opacity: 0;
+    -webkit-animation-name: on-dismiss-close-icon;
+    -webkit-animation-duration: 1s;
+    animation-name: on-dismiss-close-icon;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  .open-dismiss {
+    opacity: 0;
+    -webkit-animation-name: on-dismiss-open-icon;
+    -webkit-animation-duration: 1s;
+    animation-name: on-dismiss-open-icon;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  .open-show {
+    opacity: 1;
+    -webkit-animation-name: on-show-open-icon;
+    -webkit-animation-duration: 1s;
+    animation-name: on-show-open-icon;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  .push-logo {
+    left: 24px;
+    -webkit-animation-name: push-logo;
+    -webkit-animation-duration: 1s;
+    animation-name: push-logo;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  .push-logo-reverse {
+    left: -80vw;
+    -webkit-animation-name: push-logo-reverse;
+    -webkit-animation-duration: 1s;
+    animation-name: push-logo-reverse;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  #phone-logo {
+    position: absolute;
+    top: 24px;
+    bottom: 24px;
+    height: 24px;
+    width: 60px;
+  }
+  #toggle-open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    cursor: pointer
+  }
+  .float-menu {
+    display: none;
+  }
+  #desktop-navbar {
+    display: none;
+  }
+  #phone-navbar {
+    display: block;
+  }
+  .principal-text {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .principal-text p {
+    padding: 0 24px;
+  }
+  .bg-img h2 {
+    position: relative;
+    margin: 0;
+    margin-top: 50px;
+    color: #000;
+    top: 0;
+    left: 0;
+    padding: 0 24px;
+    -webkit-transform: none;
+    transform: none;
+    font: 11vw HUGEAvantGardeBold;
+    text-align: left;
+    line-height: 110%;
+  }
+  .pushed {
+    position: absolute;
+    left: 80vw;
+    width: 100vw;
+    -webkit-animation-name: push;
+    -webkit-animation-duration: 1s;
+    animation-name: push;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  .pushed-reverse {
+    position: absolute;
+    left: 0vw;
+    width: 100vw;
+    -webkit-animation-name: push-reverse;
+    -webkit-animation-duration: 1s;
+    animation-name: push-reverse;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  .push-options {
+    left: 0;
+    -webkit-animation-name: push-options;
+    -webkit-animation-duration: 1s;
+    animation-name: push-options;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  .push-options-reverse {
+    left: -80vw;
+    -webkit-animation-name: push-options-reverse;
+    -webkit-animation-duration: 1s;
+    animation-name: push-options-reverserotation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  #phone-options {
+    margin: 12px 0;
+    position: absolute;
+    width: 80vw;
+  }
+  #phone-options ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #000;
+  }
+  #phone-options ul li {
+    position: relative;
+    padding: 12px 24px;
+    height: 24px;
+    line-height: 24px;
+    font: 21px HUGEAvantGardeBold;
+  }
+  #phone-options ul li img {
+    display: none;
+  }
+  #phone-options ul li.expandable img {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 24px;
+  }
+  #phone-options ul li.expandable.open img {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -webkit-animation-name: rotation;
+    -webkit-animation-duration: 1s;
+    animation-name: rotation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  #phone-options ul li.expandable.close img {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -webkit-animation-name: rotation-reverse;
+    -webkit-animation-duration: 1s;
+    animation-name: rotation-reverse;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  #phone-options ul li.subitem {
+    font: 16px Galaxie;
+  }
+  #phone-options ul a:hover li.subitem {
+    color: #ec008c;
+  }
+  #phone-options ul a:link, #phone-options ul a:visited, #phone-options ul a:active {
+    text-decoration: none;
+    color: #000;
+  }
+  #phone-options ul a:hover li {
+    text-decoration: none;
+    background-color: #eee;
+  }
 }

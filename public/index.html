@@ -1,10 +1,54 @@
 <!doctype html>
 <html>
-<head>
-  <title>HUGE NavExercise</title>
-  <link rel="stylesheet" href="/styles/main.css">
-</head>
-<body>
-<h1>Hello.</h1>
-</body>
+  <head>
+    <title>HUGE NavExercise</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+      <!-- Desktop navbar -->
+      <div class="nav-bar" id="desktop-navbar">
+        <img src="images/HUGE-white.png" id="logo"></img>
+        <div class="nav-options" id="desktop-nav">
+        </div>
+      </div>
+      <!-- Phone navbar -->
+      <div class="nav-bar" id="phone-navbar">
+        <img id="toggle-open" src="images/toggle-open.svg">
+        <img id="phone-logo" src="images/HUGE-white.png" class="hide">
+        <img id="toggle-close" src="images/toggle-close.svg" class="hide">
+      </div>
+      <!-- Desktop float-menu -->
+      <div class="float-menu" id="huge-float"></div>
+    </header>
+    <!-- Phone menu -->
+    <div id="phone-options" class="hide"></div>
+    
+    <!-- Desktop/Phone content -->
+    <div id="push-items">
+      <!-- Image with text -->
+      <section>
+        <div class="bg-img">
+          <img src="images/background-image.jpg">
+          <h2>Get paid for <br> giving a shit.</h2>
+        </div>
+      </section>
+      
+      <!-- Text -->
+      <section>
+        <article>
+          <div class="principal-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quasi nihil molestias explicabo error omnis voluptatum labore, eius, neque quis amet, est deleniti nostrum ipsa quibusdam eum dolores et cupiditate impedit! Omnis fugiat laborum veritatis hic? Totam necessitatibus excepturi doloribus dignissimos quam nam earum ut at est, fugiat nesciunt dolorum inventore, praesentium natus consectetur, et aliquam quae ipsa adipisci facere quasi eligendi ullam nihil reprehenderit neque? Quam enim nobis, repudiandae obcaecati. Unde impedit consequuntur maxime, eligendi obcaecati cumque, sed quo aliquam perspiciatis odio, magnam ex quisquam! Ea eligendi ad accusamus dolores laboriosam deserunt, neque sapiente sunt, eius incidunt, aliquam nulla!</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Translucid mask -->
+      <div id="translucid-mask"></div>
+    </div>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/phone-navbar.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
 </html>

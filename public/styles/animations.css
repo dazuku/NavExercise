@@ -1,0 +1,155 @@
+/* Animation when appears close icon */
+@-webkit-keyframes on-show-close-icon {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  100% {
+    left: 100vw;
+    opacity: 1;
+    margin-left: -72px;
+  }
+}
+
+/* Animation when dismiss close icon */
+@-webkit-keyframes on-dismiss-close-icon {
+  0% {
+    left: 100vw;
+    opacity: 1;
+    margin-left: -72px;
+  }
+  100% {
+    left: 0;
+    opacity: 0;
+  }
+}
+
+/* Animation when dismiss open icon */
+@-webkit-keyframes on-dismiss-open-icon {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 100vw;
+    opacity: 0;
+    margin-left: -72px;
+  }
+}
+
+/* Animation when show open icon */
+@-webkit-keyframes on-show-open-icon {
+  0% {
+    left: 100vw;
+    opacity: 0;
+    margin-left: -72px;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+/* Animation to push logo to left-right */
+@-webkit-keyframes push-logo {
+  0% {
+    left: -80vw;
+  }
+  100% {
+    left: 24px;
+  }
+}
+
+/* Animation to push logo to right-left */
+@-webkit-keyframes push-logo-reverse {
+  0% {
+    left: 24px;
+  }
+  100% {
+    left: -80vw;
+  }
+}
+
+/* Animation to push all content to left-right */
+@-webkit-keyframes push {
+  0% {
+    left: 0vw;
+  }
+  100% {
+    left: 80vw;
+  }
+}
+
+/* Animation to push all content to right-left */
+@-webkit-keyframes push-reverse {
+  0% {
+    left: 80vw;
+  }
+  100% {
+    left: 0vw;
+  }
+}
+
+/* Animation to push navbar to left-right */
+@-webkit-keyframes push-options {
+  0% {
+    left: -80vw;
+  }
+  100% {
+    left: 0vw;
+  }
+}
+
+/* Animation to push navbar to right-left */
+@-webkit-keyframes push-options-reverse {
+  0% {
+    left: 0vw;
+  }
+  100% {
+    left: -80vw;
+  }
+}
+
+/* Animation opacity */
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animation opacity */
+@-webkit-keyframes opacity-reverse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Animation positive rotation of the arrows */
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+  }
+}
+
+/* Animation negative rotation of the arrows */
+@-webkit-keyframes rotation-reverse {
+  0% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+}
